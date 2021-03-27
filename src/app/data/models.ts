@@ -1,4 +1,3 @@
-
 export interface WordType {
   word: string;
   type: Type;
