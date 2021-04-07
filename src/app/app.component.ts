@@ -7,14 +7,17 @@ import {WordsService} from './services/words.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private wordService: WordsService) {
+  nouns = this.wordsService.getNouns();
+  verbs = this.wordsService.getVerbs();
+
+  constructor(private wordsService: WordsService) {
   }
 
-  get nouns() {
-    return this.wordService.getNouns();
-  }
-
-  get verbs() {
-    return this.wordService.getVerbs();
-  }
+  // get nouns() {
+  //   return this.wordService.getNouns();
+  // }
+  //
+  // get verbs() {
+  //   return this.wordService.getVerbs();
+  // }
 }
